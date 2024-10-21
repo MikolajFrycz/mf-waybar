@@ -7,8 +7,9 @@
 }
 
 #waybar {
-  background: transparent;
-  color: @text;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0.83;
+  color: @sky;
   margin: 5px 5px;
 }
 
@@ -35,6 +36,16 @@
   border-radius: 1rem;
 }
 
+#custom-pacman {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#custom-pacman.pending-updates {
+  animation-name: blink-update;
+  animation-duration: 3s;
+}
+
 #custom-music,
 #tray,
 #backlight,
@@ -43,10 +54,23 @@
 #pulseaudio,
 #custom-lock,
 #custom-gammastep,
+#custom-chrome,
+#custom-chatgpt,
+#custom-pacman,
 #custom-power {
   background-color: @surface0;
   padding: 0.5rem 1rem;
   margin: 5px 0;
+}
+
+#custom-chrome {
+  margin-left: 1rem;
+  border-radius: 1rem 0px 0px 1rem;
+}
+
+#custom-chatgpt {
+  margin-right: 1rem;
+  border-radius: 0px 1rem 1rem 0px;
 }
 
 #clock {

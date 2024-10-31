@@ -55,6 +55,8 @@
 #custom-lock,
 #custom-gammastep,
 #custom-chrome,
+#custom-appmenu,
+#custom-files,
 #custom-chatgpt,
 #custom-pacman,
 #custom-power {
@@ -63,7 +65,8 @@
   margin: 5px 0;
 }
 
-#custom-chrome {
+#custom-appmenu {
+  color: @blue;
   margin-left: 1rem;
   border-radius: 1rem 0px 0px 1rem;
 }

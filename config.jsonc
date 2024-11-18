@@ -3,7 +3,7 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces","custom/appmenu","custom/chrome","custom/files","custom/chatgpt"],
+    "modules-left": ["hyprland/workspaces","custom/appmenu","custom/firefox","custom/files","custom/waypaper","custom/chatgpt"],
     "modules-center": ["custom/music"],
     "modules-right": ["pulseaudio", "backlight", "battery", "clock", "tray", "custom/lock", "custom/gammastep", "custom/pacman", "custom/power"],
     "hyprland/workspaces": {
@@ -24,21 +24,21 @@
     	"tooltip": true,
 	"tooltip-format": "App Launcher",
 	"on-click": "rofi -show drun -show-icons",
-	"format": ""
+	"format": ""
     },
-    "custom/chrome": {
+    "custom/firefox": {
 	"tooltip": true,
-	"tooltip-format": "Open Chromium Browser",
+	"tooltip-format": "Open Firefox Browser",
         "return-type": "json",
-        "format": "",
+        "format": "󰈹",
         "tooltip": "Launch Chromium",
-        "on-click": "chromium"
+        "on-click": "firefox"
     },
     "custom/chatgpt": {
 	"tooltip": true,
 	"tooltip-format": "Open ChatGPT",
 	"return-type": "json",
-	"format": "\uf544",
+	"format": "󱚣",
 	"tooltip": "ChatGPT",
 	"on-click": "chromium --app=https://chatgpt.com/"
     },
@@ -54,8 +54,8 @@
     "clock": {
         "timezone": "Europe/Berlin",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": " {:%d/%m/%Y}",
-        "format": " {:%H:%M}"
+        "format-alt": "󰥔 {:%d/%m/%Y}",
+        "format": "󰥔 {:%H:%M}"
     },
     "backlight": {
         "device": "intel_backlight",
@@ -93,6 +93,12 @@
     	"on-click": "thunar",
 	"format": ""
     },
+    "custom/waypaper": {
+    	"tooltip": true,
+	"tooltip-format": "Wallpaper Switcher",
+	"on-click": "waypaper",
+        "format": "󰸉"	
+    },
     "custom/gammastep": {
     	"tooltip": true,
 	"tooltip-format": "On/Off Night Mode",
@@ -108,11 +114,11 @@
     },
     "custom/pacman": {
   	"format": "{}{icon}",
-	"on-click": "alacritty -e bash -c 'echo \"Running full system upgrade with pacman -Syu...\"; sudo pacman -Syu; exec bash'",
+	"on-click": "alacritty -e bash -c 'echo \"Running full system upgrade with yay...\"; yay; exec bash'",
   	"return-type": "json",
   	"format-icons": {
-    	"pending-updates": "  ",
-    	"updated": " "
+    	"pending-updates": "  ",
+    	"updated": " "
   	},
   	"exec-if": "which waybar-updates",
   	"exec": "waybar-updates"

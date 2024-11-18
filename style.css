@@ -54,9 +54,10 @@
 #pulseaudio,
 #custom-lock,
 #custom-gammastep,
-#custom-chrome,
+#custom-firefox,
 #custom-appmenu,
 #custom-files,
+#custom-waypaper,
 #custom-chatgpt,
 #custom-pacman,
 #custom-power {
@@ -66,7 +67,7 @@
 }
 
 #custom-appmenu {
-  color: @blue;
+  color: @mauve;
   margin-left: 1rem;
   border-radius: 1rem 0px 0px 1rem;
 }
